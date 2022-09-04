@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" defer type="module"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Complex Todo</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1>Rohan's Todo</h1>
+      </div>
+    </nav>
+    <div class="form-content">
+      <div class="container">
+        <form>
+          <input type="text" name="title" placeholder="What are you up to..." />
+          <select name="channel" id="channel">
+            <option value="channel" selected disabled>Channels</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+          <select name="category" id="category">
+            <option value="category" selected disabled>Category</option>
+            <option value="games">Games</option>
+            <option value="sports">Sports</option>
+            <option value="study">Study</option>
+            <option value="music">Music</option>
+            <option value="extertainment">Extertainment</option>
+          </select>
+          <button type="submit" class="button">Add Task</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="headings">
+      <div class="container">
+        <div><h3>Channel</h3></div>
+        <!-- <div><h3>Lists</h3></div> -->
+        <div><h3>Todos</h3></div>
+      </div>
+    </div>
+
+    <div class="todo-content">
+      <div class="container">
+        <div class="channels">
+          <div class="channel">A</div>
+          <div class="channel">B</div>
+          <div class="channel">C</div>
+          <div class="channel">D</div>
+        </div>
+
+        <div class="lists">
+          <div class="list">Games</div>
+          <div class="list">Sports</div>
+          <div class="list">Study</div>
+          <div class="list">Music</div>
+          <div class="list">Entertainment</div>
+        </div>
+
+        <div class="todo">
+          <ul class="todos">
+            <!-- <li>I am a good boy<span>Games</span><span>B</span></li>
+            <li>Rohan Banerjee<span>Sports</span><span>B</span></li>
+            <li>Ayan Banerjee<span>Extertainment</span><span>A</span></li>
+            <li>Madhurima Saha<span>Study</span><span>C</span></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
