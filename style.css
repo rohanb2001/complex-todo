@@ -127,7 +127,7 @@ form .button:hover {
 }
 
 .todo-content .lists .list:hover {
-  color: darkmagenta;
+  color: #c427c4;
   cursor: pointer;
 }
 
@@ -155,4 +155,12 @@ form .button:hover {
 
 .todo-content ul li span:nth-child(2) {
   color: #9c36b3;
+}
+
+.channel-active {
+  background: red !important;
+}
+
+.category-active {
+  color: #c427c4;
 }
