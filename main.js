@@ -2,6 +2,8 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 const form = document.querySelector("form");
 const channels = document.querySelector(".channels");
+const allChannel = document.querySelectorAll(".channel");
+const allList = document.querySelectorAll(".list");
 const categories = document.querySelector(".lists");
 const ul = document.querySelector(".todos");
 
@@ -79,7 +81,27 @@ function filterChannelAndCategories() {
 
 function clickToSort(e) {
   if (e.target.classList.contains("channel")) {
-  } else if (e.target.className === "list") {
+    if (state.selectedChannel !== e.target.textContent) {
+      allChannel.forEach((item) => item.classList.remove("channel-active"));
+      state.selectedChannel = e.target.textContent;
+      state.channelActive = false;
+      e.target.classList.add("channel-active");
+    } else if (state.selectedChannel === e.target.textContent) {
+      state.channelActive = !state.channelActive;
+      e.target.classList.toggle("channel-active");
+    }
+  } else if (e.target.classList.contains("list")) {
+    if (state.selectedCategory !== e.target.textContent.toLowerCase()) {
+      console.log("fff");
+      allList.forEach((item) => item.classList.remove("category-active"));
+      state.selectedCategory = e.target.textContent.toLowerCase();
+      state.categoryActive = false;
+      e.target.classList.add("category-active");
+    } else if (state.selectedCategory === e.target.textContent.toLowerCase()) {
+      console.log("fff");
+      state.categoryActive = !state.categoryActive;
+      e.target.classList.toggle("category-active");
+    }
   }
   showUI();
 }

@@ -162,5 +162,5 @@ form .button:hover {
 }
 
 .category-active {
-  color: #c427c4;
+  color: #c427c4 !important;
 }
